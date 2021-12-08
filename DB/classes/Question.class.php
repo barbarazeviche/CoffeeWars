@@ -78,4 +78,11 @@ class Question {
 
         return $this;
     }
+
+    // AFFICHER QUESTION
+    function afficherQuestion(): void
+    {
+        echo $this->getIntitule_question();
+        // echo '<div>' . $intitule_question . '</div>';
+    }
 }

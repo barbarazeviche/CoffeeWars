@@ -24,6 +24,8 @@
         $managerQuestion->insert($nouvelleQuestion);
         $ID_question = $nouvelleQuestion->getid();
 
+        $managerQuestion->afficherQuestion($nouvelleQuestion);
+
         $nouvelleReponse = new Reponse(["intitule_reponse"=>$_POST["reponse1"], "ID_question"=>$ID_question, "resultat"=>$_POST["resultat1"]]);
         $managerReponse = new ReponseManager($bdd);
         $managerReponse->insert($nouvelleReponse);
