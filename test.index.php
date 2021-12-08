@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <div class="containerBtn">
-        <button class="btn">Valider</button>
-    </div>
+
 
 <div id="container">
+
+        <div class="containerBtn">
+            <button class="btn">Valider</button>
+        </div>
+        
         <div id="board">       
             <div class="wrapper">
                 <div id="bloc1">
