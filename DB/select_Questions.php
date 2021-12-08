@@ -7,16 +7,20 @@
             echo $e->getMessage();
             die();
         }   
-
         include "./vendor/autoload.php";
         
 $managerQuestion = new QuestionManager($bdd);
-$test = $managerQuestion->select();
-// var_dump($test);
-var_dump($test[4]) ;
-echo '<br><br>';
-echo $test[4]->getIntitule_question();
-foreach ($test as $indexObjet=>$valeurObjet) {
-    $valeurObjet->afficherQuestion();
-    // $valeurObjet->afficherQuestion($valeurObjet->getIntitule_question());
-};
+// Sélectionner toutes les questions (array)
+$listeQuestions = $managerQuestion->select();
+// Choisir une question aléatoire
+$indexAleatoire = rand(0,count($listeQuestions)-1);
+$questionChoisie = $listeQuestions[$indexAleatoire] ;
+// Afficher la question avec echo (fct qui se trouve dans la classe Question)
+$questionChoisie->afficherQuestion();
+
+// ? AFFICHER TOUTES LES QUESTIONS
+// echo '<br><br>';
+// echo $listeQuestions[4]->getIntitule_question();
+// foreach ($listeQuestions as $valeurObjet) {
+//     $valeurObjet->afficherQuestion();
+// };
