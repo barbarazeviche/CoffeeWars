@@ -59,6 +59,16 @@ class Type {
         return $this;
     }
 
+    // AFFICHER TYPE
+    public function afficherType(): void
+    {
+        echo $this->getType_question();
+    }
+
+    public function afficherIndexType():void
+    {
+        echo $this->getid();
+    }
 }
 
     
