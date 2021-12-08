@@ -42,8 +42,14 @@
             <label for="intitule_question">Intitulé de la question :</label>
                 <input type="text" id="intitule_question" name="intitule_question">
 <br>           
+            <label for="reponse1">réponse 1</label>
+            <input id="reponse1" type="text">
             <label for="">réponse 1</label>
-            <input type="text">
+            
+            <input type="radio" name="solution" value="un"><br>
+            <input type="radio" name="solution" value="deux"><br>
+            <input type="radio" name="solution" value="trois"><br>
+        </p>
             <label for="">réponse 2</label>
             <input type="text">
             <label for="">réponse 3</label>
