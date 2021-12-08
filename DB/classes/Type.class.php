@@ -3,7 +3,7 @@
 class Type {
 
     public int $id;
-    public string $type;
+    public string $type_question;
 
     public function __construct(array $vals)
     {
@@ -40,21 +40,21 @@ class Type {
     }
 
     /**
-     * Get the value of type
+     * Get the value of type_question
      */ 
-    public function getType()
+    public function getType_question()
     {
-        return $this->type;
+        return $this->type_question;
     }
 
     /**
-     * Set the value of type
+     * Set the value of type_question
      *
      * @return  self
      */ 
-    public function setType($type)
+    public function setType_question($type_question)
     {
-        $this->type = $type;
+        $this->type_question = $type_question;
 
         return $this;
     }

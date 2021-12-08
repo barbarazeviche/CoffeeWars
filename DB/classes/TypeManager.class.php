@@ -12,7 +12,7 @@ public function __construct(PDO $objetBD)
 public function select(array $filtres = []): array
     {
         $sql = "SELECT * FROM types";
-        // SELECT * from types WHERE type=:type
+        // SELECT * from types WHERE type_question=:type_question
         if (count($filtres) > 0) {
             $sql = $sql . " WHERE ";
 
@@ -53,11 +53,11 @@ public function select(array $filtres = []): array
     }
     
     public function update (Type $unType) : void {
-        $sql = "UPDATE types SET type = :type, 
+        $sql = "UPDATE types SET type_question = :type_question, 
                 WHERE id=:id";
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue(":id", $unType->getId());
-        $requete->bindValue(":type", $unType->gettype()); 
+        $requete->bindValue(":type_question", $unType->getType_question()); 
         $requete->execute();
         
     }
