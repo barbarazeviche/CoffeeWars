@@ -8,6 +8,7 @@
 </head>
 <body>
     
+<h1>Hello World</h1>
     <?php
 
         include_once "./config/db.php";
@@ -18,21 +19,21 @@
             die();
         }   
 
-        include_once "./Question.class.php";
-        include_once "./QuestionManager.class.php";
+        include "./vendor/autoload.php";
+
 
         $nouvelleQuestion = new Question(["intitule_question"=>"TestIncludeNew2", "ID_type"=>"3"]);
         $managerQuestion = new QuestionManager($bdd);
-        $managerQuestion->insert($nouveauPays);
-        var_dump($nouveauPays);
-        $aSupprimer = $managerQuestion->select(["id"=>111]);
-        var_dump($aSupprimer);
-        $managerQuestion->delete($aSupprimer[0]);
+        $managerQuestion->insert($nouvelleQuestion);
+        // var_dump($nouvelleQuestion);
+        // $aSupprimer = $managerQuestion->select(["id"=>111]);
+        // var_dump($aSupprimer);
+        // $managerQuestion->delete($aSupprimer[0]);
 
-        //update
-        $modifierQuestion = $managerQuestion->select(["id"=>114]);
-        $modifierQuestion[0]->hydrate(["country"=>"PaysModifié"]);
-        $managerQuestion->update($modifierQuestion[0]);
+        // //update
+        // $modifierQuestion = $managerQuestion->select(["id"=>114]);
+        // $modifierQuestion[0]->hydrate(["country"=>"PaysModifié"]);
+        // $managerQuestion->update($modifierQuestion[0]);
 
     ?>
 

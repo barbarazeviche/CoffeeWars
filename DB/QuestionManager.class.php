@@ -10,33 +10,35 @@ public function __construct(PDO $objetBD)
 }
 
 //INSERT 
-//INSERT INTO `country` (`id`, `country`, `last_update`) VALUES (NULL, 'nomPays', current_timestamp());
-public function insert(Pays $unPays):void
+//INSERT INTO `questions` (`id`, `intitule_question`, `ID_type`) VALUES (NULL, 'nomQuestion', ID_type);
+public function insert(Question $uneQuestion):void
 {
-    $sql = "INSERT INTO country (country, last_update) VALUES (:country, :last_update)";
+    $sql = "INSERT INTO questions (intitule_question, ID_type) VALUES (:intitule_question, :ID_type)";
     $requete = $this->bdd->prepare($sql);
-    $requete->bindValue(":country",$unPays->country);
-    $requete->bindValue(":last_update",$unPays->last_update);
+    $requete->bindValue(":intitule_question",$uneQuestion->intitule_question);
+    $requete->bindValue(":ID_type",$uneQuestion->ID_type);
     $requete->execute();
     // var_dump($requete->errorInfo());
     // die();
-    $unPays->hydrate(['id'=>$this->bdd->lastInsertId()]);
+    $uneQuestion->hydrate(['id'=>$this->bdd->lastInsertId()]);
 }
 
-public function delete(Pays $unPays)
+// DELETE
+public function delete(Question $uneQuestion)
     {
-        $sql = "DELETE FROM country WHERE id=:id";
+        $sql = "DELETE FROM questions WHERE id=:id";
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue(":id", $unPays->getId());
+        $requete->bindValue(":id", $uneQuestion->getId());
         $requete->execute();
         var_dump($requete->errorInfo());
         var_dump($this->bdd->errorInfo());
     }
 
+    // SELECT
 public function select(array $filtres = []): array
     {
-        $sql = "SELECT * FROM country";
-        // SELECT * from country WHERE country=:country AND last_update=:last_update
+        $sql = "SELECT * FROM questions";
+        // SELECT * from questions WHERE intitule_question=:intitule_question AND ID_type=:ID_type
         if (count($filtres) > 0) {
             $sql = $sql . " WHERE ";
 
@@ -58,32 +60,34 @@ public function select(array $filtres = []): array
 
         $res = $requete->fetchAll(PDO::FETCH_ASSOC);
 
-        $arrayObjetsPays = [];
-        foreach ($res as $unPaysArray) {
-            $arrayObjetsPays[] = new Pays($unPaysArray);
+        $arrayObjetsQuestion = [];
+        foreach ($res as $uneQuestionArray) {
+            $arrayObjetsQuestion[] = new Question($uneQuestionArray);
         }
-        return $arrayObjetsPays;
+        return $arrayObjetsQuestion;
     }
 
-    public function selectParId(int $id): Pays
+    // SELECT par ID
+    public function selectParId(int $id): Question
     {
-        $sql = "SELECT * FROM country WHERE id=:id";
+        $sql = "SELECT * FROM questions WHERE id=:id";
         $requete = $this->bdd->prepare($sql);
         $requete->bindValue(":id",$id);
         $requete->execute();
-        $arrayUnPays = $requete->fetch(PDO::FETCH_ASSOC); // une seule ligne, un seul array
-        return new Pays($arrayUnPays);
+        $arrayUneQuestion = $requete->fetch(PDO::FETCH_ASSOC); // une seule ligne, un seul array
+        return new Question($arrayUneQuestion);
         
     }
     
-    public function update (Pays $unPays) : void {
-        $sql = "UPDATE country SET country = :country, 
-                                last_update = :last_update
+    // UPDATE
+    public function update (Question $uneQuestion) : void {
+        $sql = "UPDATE questions SET intitule_question = :intitule_question, 
+                                            ID_type = :ID_type
                 WHERE id=:id";
         $requete = $this->bdd->prepare($sql);
-        $requete->bindValue(":id", $unPays->getId());
-        $requete->bindValue(":country",$unPays->getCountry()); 
-        $requete->bindValue(":last_update",$unPays->getLast_update());
+        $requete->bindValue(":id", $uneQuestion->getId());
+        $requete->bindValue(":intitule_question",$uneQuestion->getIntitule_question());
+        $requete->bindValue(":ID_type",$uneQuestion->getID_type()); 
         $requete->execute();
         
     }
