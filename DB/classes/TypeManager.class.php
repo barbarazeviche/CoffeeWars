@@ -9,6 +9,32 @@ public function __construct(PDO $objetBD)
     $this->bdd = $objetBD;
 }
 
+
+//INSERT 
+//INSERT INTO `types` (`id`, `intitule_question`, `ID_type`) VALUES (NULL, 'nomType', ID_type);
+public function insert(Type $uneType):void
+{
+    $sql = "INSERT INTO types (type_question) VALUES (:type_question)";
+    $requete = $this->bdd->prepare($sql);
+    $requete->bindValue(":type_question",$uneType->type_question);
+    $requete->execute();
+    // var_dump($requete->errorInfo());
+    // die();
+    $uneType->hydrate(['id'=>$this->bdd->lastInsertId()]);
+}
+
+// DELETE
+public function delete(Type $uneType)
+    {
+        $sql = "DELETE FROM types WHERE id=:id";
+        $requete = $this->bdd->prepare($sql);
+        $requete->bindValue(":id", $uneType->getId());
+        $requete->execute();
+        var_dump($requete->errorInfo());
+        var_dump($this->bdd->errorInfo());
+    }
+
+    // SELECT
 public function select(array $filtres = []): array
     {
         $sql = "SELECT * FROM types";
@@ -41,6 +67,8 @@ public function select(array $filtres = []): array
         return $arrayObjetsType;
     }
 
+
+    // SELECT par ID
     public function selectParId(int $id): Type
     {
         $sql = "SELECT * FROM types WHERE id=:id";
@@ -52,6 +80,7 @@ public function select(array $filtres = []): array
         
     }
     
+        // UPDATE
     public function update (Type $unType) : void {
         $sql = "UPDATE types SET type_question = :type_question, 
                 WHERE id=:id";

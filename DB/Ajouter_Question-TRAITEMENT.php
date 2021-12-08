@@ -22,6 +22,7 @@
         $nouvelleQuestion = new Question(["intitule_question"=>$_POST["intitule_question"], "ID_type"=>$_POST["ID_type"]]);
         $managerQuestion = new QuestionManager($bdd);
         $managerQuestion->insert($nouvelleQuestion);
+        // récupérer l'ID de la question
         $ID_question = $nouvelleQuestion->getid();
 
         $nouvelleReponse = new Reponse(["intitule_reponse"=>$_POST["reponse1"], "ID_question"=>$ID_question, "resultat"=>$_POST["resultat1"]]);
@@ -36,12 +37,6 @@
         $managerReponse = new ReponseManager($bdd);
         $managerReponse->insert($nouvelleReponse);
 
-    //$Manager->select();
-
-        //var_dump($_POST);
-        //echo $_POST["entreprise"];
-        //echo $_POST["email"];
-        //echo $_FILES["logo"];
     ?>
 
     <a href="./Ajouter_Question-FORM.php">Ajouter une autre question</a>        

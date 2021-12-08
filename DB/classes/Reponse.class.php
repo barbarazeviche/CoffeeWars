@@ -101,4 +101,10 @@ class Reponse {
 
         return $this;
     }
+
+    // AFFICHER TYPE
+    function afficherReponse(): void
+    {
+        echo $this->getIntitule_reponse();
+    }
 }
