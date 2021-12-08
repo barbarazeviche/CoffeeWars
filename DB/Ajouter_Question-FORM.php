@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee wars - Add Question</title>
+</head>
+<body>
+    <div>
+        Coffee wars - Add Question
+    </div>
+    <div>
+        <form id="formulaire" action="Ajouter_Question-TRAITEMENT.php" method="POST" enctype="multipart/form-data">
+            <label for="entreprise">Nom de votre entreprise :</label>
+            <input type="text" id="entreprise" name="entreprise">
+            <label for="email">Votre Email :</label>
+            <input type="email" id="email" name="email">
+            <label for="logo">Votre logo :</label>
+            <input type="file" id="logo" name="logo">
+            <label for="">Question ouverte :</label>
+            <input type="text" name="open" id="">
+            <label for="multi">Question à choix multiples :</label>
+            <input type="text" name="multi" id="">
+            <label for="">réponse 1</label>
+            <input type="text">
+            <label for="">réponse 2</label>
+            <input type="text">
+            <label for="">réponse 3</label>
+            <input type="text">
+            <label for="">réponse 4</label>
+            <input type="text">
+            <input type="submit">
+        </form>
+        <button id="newOpen">Ajouter une question ouverte</button>
+        <button id="newMulti">Ajouter une question à choix multiples</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
