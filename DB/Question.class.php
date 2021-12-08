@@ -4,7 +4,7 @@ class Question {
 
     public int $id;
     public string $intitule_question;
-    public string $ID_type;
+    public int $ID_type;
 
     public function __construct(array $vals)
     {

@@ -12,22 +12,7 @@
         Coffee wars - Add Question
     </div>
     <div>
-        <!-- LIAISON BD -->
-        <?php
-        include_once "./config/db.php";
-        try {
-            $bdd = new PDO(DBDRIVER . ':host=' . DBHOST . ';port=' . DBPORT . ';dbname=' . DBNAME . ';charset='. DBCHARSET, DBUSER, DBPASS);
-        } catch (Exception $e) {
-            echo $e->getMessage();
-            die();
-        }   
-        // ! AUTOLOAD ?
-        include_once "./Type.class.php";
-        include_once "./TypeManager.class.php";
-        include_once "./Question.class.php";
-        include_once "./QuestionManager.class.php";
-        ?>
-
+        
         <form id="formulaire" action="Ajouter_Question-TRAITEMENT.php" method="POST" enctype="multipart/form-data">
             <label for="ID_type">Type de la question :</label>
             <select name="ID_type" id="ID_type">
@@ -38,22 +23,34 @@
                 <option value="5">Interface 3</option>
                 <option value="6">Culture Générale</option>
             </select>
+           
 <br>            
             <label for="intitule_question">Intitulé de la question :</label>
                 <input type="text" id="intitule_question" name="intitule_question">
 <br>           
             <label for="reponse1">réponse 1</label>
-            <input id="reponse1" type="text">
-            <label for="">réponse 1</label>
-            
-            <input type="radio" name="solution" value="un"><br>
-            <input type="radio" name="solution" value="deux"><br>
-            <input type="radio" name="solution" value="trois"><br>
-        </p>
-            <label for="">réponse 2</label>
-            <input type="text">
-            <label for="">réponse 3</label>
-            <input type="text">
+            <input id="reponse1" name="reponse1" type="text">
+            <label for="resultat1">Résultat réponse</label>
+            <select name="resultat1" id="resultat1">
+                <option value="0">FAUX</option>
+                <option value="1">VRAI</option>
+            </select>
+<br>
+            <label for="reponse2">réponse 2</label>
+            <input id="reponse2" name="reponse2" type="text">
+            <label for="resultat2">Résultat réponse</label>
+            <select name="resultat2" id="resultat2">
+                <option value="0">FAUX</option>
+                <option value="1">VRAI</option>
+            </select>
+<br>
+            <label for="reponse3">réponse 3</label>
+            <input id="reponse3" name="reponse3" type="text">
+            <label for="resultat3">Résultat réponse</label>
+            <select name="resultat3" id="resultat3">
+                <option value="0">FAUX</option>
+                <option value="1">VRAI</option>
+            </select>
 <br>
             <input type="submit">
         </form>
