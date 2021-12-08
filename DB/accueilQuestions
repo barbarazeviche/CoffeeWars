@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee wars - Add Question</title>
+</head>
+<body>
+    
+    <?php
+
+        include_once "./config/db.php";
+        try {
+            $bdd = new PDO(DBDRIVER . ':host=' . DBHOST . ';port=' . DBPORT . ';dbname=' . DBNAME . ';charset='. DBCHARSET, DBUSER, DBPASS);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            die();
+        }   
+
+        include_once "./Question.class.php";
+        include_once "./QuestionManager.class.php";
+
+        $nouvelleQuestion = new Question(["intitule_question"=>"TestIncludeNew2", "ID_type"=>"1"]);
+        $managerQuestion = new QuestionManager($bdd);
+        $managerPays->insert($nouveauPays);
+        var_dump($nouveauPays);
+        $aSupprimer = $managerPays->select(["id"=>111]);
+        var_dump($aSupprimer);
+        $managerPays->delete($aSupprimer[0]);
+
+        //update
+        $modifierPays = $managerPays->select(["id"=>114]);
+        $modifierPays[0]->hydrate(["country"=>"PaysModifié"]);
+        $managerPays->update($modifierPays[0]);
+
+    ?>
+
+</body>
+</html>
