@@ -23,7 +23,6 @@
                 <option value="5">Interface 3</option>
                 <option value="6">Culture Générale</option>
             </select>
-           
 <br>            
             <label for="intitule_question">Intitulé de la question :</label>
                 <input type="text" id="intitule_question" name="intitule_question">
