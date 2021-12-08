@@ -7,16 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Question</h1>
     <div>
-        <div class="question" id="question_place">
+        <div class="jauge">
+            <div>
+                <img src="./assets/img/thermos.png" alt="Thermos café">
+            </div>
+            <div>
+                <div class="cafePlein"></div>
+            </div>
+            <div class="timer">
 
+            </div>
         </div>
-        <div class="reponse" id="question_place">
-
-        </div>
-
-        <button type="submit"></button>    
     </div>
 </body>
 </html>
