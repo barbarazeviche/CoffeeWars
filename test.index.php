@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="containerBtn">
+        <button class="btn">Valider</button>
+    </div>
+
 <div id="container">
         <div id="board">       
             <div class="wrapper">
