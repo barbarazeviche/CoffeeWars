@@ -9,43 +9,49 @@
 </head>
 <body>
 
+<header>
+    <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
+    <img id="grain_cafe"src="assets/img/grain_cafe.png" alt="">
+</header>
 
+<div>
+    Bienvenue à Interface 3 !
+</div>
+<section>
+    <div id="container">
+            
+            <div id="board">       
+                <div class="wrapper">
+                    <div id="bloc1">
+                        <div class="inutile"></div>
+                        <div class="local6"></div>
+                        <div id="wc"></div>
+                    </div>
 
-<div id="container">
+                    <div id="bloc2">
+                        <div class="local1"></div>
+                        <div class="local6"></div>
+                        <div class="local2"></div>
+                    </div>
 
-        <div class="containerBtn">
-            <button class="btn">Valider</button>
-        </div>
-        
-        <div id="board">       
-            <div class="wrapper">
-                <div id="bloc1">
-                 
-                    <div id="wc"></div>
-                    <div class="local6"></div>
-                    <div id="wc">WC2</div>
-                </div>
+                    <div id="bloc3">
+                        <div class="local3"></div>
+                        <div class="local6"></div>
+                        <div class="local4"></div>
+                    </div>
 
-                <div id="bloc2">
-                    <div class="local1">Cafet'</div>
-                    <div class="local6"></div>
-                    <div class="local2">Wad</div>
-                </div>
-
-                <div id="bloc3">
-                    <div class="local3">Profs</div>
-                    <div class="local6"></div>
-                    <div class="local4">Web</div>
-                </div>
-
-                <div id="bloc4">
-                    <div class="local5">ASR</div>
-                    <div class="local6">Entrée</div>
-                    <div class="local7">Game</div>
+                    <div id="bloc4">
+                        <div class="local5"></div>
+                        <div class="local6"></div>
+                        <div class="local7"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+</section>
 
+<footer>
+
+</footer>
 </body>
 </html>
