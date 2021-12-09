@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 08 déc. 2021 à 10:52
+-- Généré le : mer. 08 déc. 2021 à 15:12
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 7.4.23
 
@@ -33,6 +33,20 @@ CREATE TABLE `questions` (
   `ID_type` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `questions`
+--
+
+INSERT INTO `questions` (`ID`, `intitule_question`, `ID_type`) VALUES
+(1, 'TestIncludeNew2', 3),
+(2, 'TestIncludeNew2', 3),
+(3, 'TestIncludeNew2', 3),
+(4, 'TestIncludeNew2', 3),
+(5, 'TestIncludeNew2', 3),
+(6, 'TestIncludeNew2', 3),
+(7, 'TestIncludeNew2', 3),
+(8, 'En quelle année Interface 3 a été créé ?', 5);
+
 -- --------------------------------------------------------
 
 --
@@ -54,14 +68,14 @@ CREATE TABLE `reponses` (
 
 CREATE TABLE `types` (
   `ID` int(11) NOT NULL,
-  `type` varchar(30) NOT NULL
+  `type_question` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `types`
 --
 
-INSERT INTO `types` (`ID`, `type`) VALUES
+INSERT INTO `types` (`ID`, `type_question`) VALUES
 (1, 'web'),
 (2, 'wad'),
 (3, 'game'),
@@ -101,7 +115,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT pour la table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `reponses`

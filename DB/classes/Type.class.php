@@ -1,10 +1,9 @@
 <?php
 
-class Question {
+class Type {
 
     public int $id;
-    public string $intitule_question;
-    public string $ID_type;
+    public string $type_question;
 
     public function __construct(array $vals)
     {
@@ -39,42 +38,37 @@ class Question {
 
         return $this;
     }
+
     /**
-     * Get the value of intitule_question
+     * Get the value of type_question
      */ 
-    public function getIntitule_question()
+    public function getType_question()
     {
-        return $this->intitule_question;
+        return $this->type_question;
     }
 
     /**
-     * Set the value of intitule_question
+     * Set the value of type_question
      *
      * @return  self
      */ 
-    public function setIntitule_question($intitule_question)
+    public function setType_question($type_question)
     {
-        $this->intitule_question = $intitule_question;
+        $this->type_question = $type_question;
 
         return $this;
     }
 
-    /**
-     * Get the value of ID_type
-     */ 
-    public function getID_type()
+    // AFFICHER TYPE
+    public function afficherType(): void
     {
-        return $this->ID_type;
+        echo $this->getType_question();
     }
 
-    /**
-     * Set the value of ID_type
-     *
-     * @return  self
-     */ 
-    public function setID_type($ID_type)
+    public function afficherIndexType():void
     {
-        $this->ID_type = $ID_type;
-
-        return $this;
+        echo $this->getid();
     }
+}
+
+    

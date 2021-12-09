@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Question</h1>
+    <div>
+        <div class="question" id="question_place">
+
+        </div>
+        <div class="reponse" id="question_place">
+
+        </div>
+
+        <button type="submit"></button>    
+    </div>
 </body>
 </html>
