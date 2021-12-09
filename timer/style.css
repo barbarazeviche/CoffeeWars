@@ -1,0 +1,48 @@
+@font-face{
+    font-family: bratsy;
+    src: url(bratsy.otf);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 50vh;
+    height: 50vh;
+    
+}
+.progressBar {
+    position: relative;
+    width: 200px;
+    height: 27px;
+    border-radius: 10px;
+    background-color: #c4c4c4;
+	transform: rotate(-90deg);
+    left: -55px;
+    top:110px;
+     /* z-index: 1; */
+}
+
+.countdown {
+    height: 27px;
+    font-family: 'bratsy';
+    font-size: 15px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    color: #F2493E;
+    line-height: 27px; /* same as #progressBar height if we want text middle aligned */
+    background-color: #302020;
+   /*  z-index: 2; */
+}
+
+.thermos {
+    width: 100%;
+	height: 100%;
+    margin-top: 0px;
+    background-image: url("thermos.png");
+    background-repeat: no-repeat;
+    z-index: 3;
+}
