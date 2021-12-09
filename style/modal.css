@@ -4,7 +4,10 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+   
+   
 }
+
 
 @font-face {
     font-family: bratsy ;
@@ -17,7 +20,6 @@
   display:flex;
   justify-content: center;
   align-items:center;
-  background-color:#FDF5BD;
   flex-direction: column;
   height:830px;
   
@@ -117,6 +119,4 @@ p,.btnModal {
     padding-top:15px;
     
 }
-
-
 
