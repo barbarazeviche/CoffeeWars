@@ -25,7 +25,6 @@ $indexType = $typeChoisi->getid();
 
 
 // CHOIX QUESTION   
-// echo '<br><br><h2>Intitulé Question : </h2>'; 
 $managerQuestion = new QuestionManager($bdd);
 // Sélectionner toutes les questions (array) avec filtre
 $listeQuestions = $managerQuestion->select(['ID_type'=>$indexType]);
@@ -34,13 +33,13 @@ $indexAleatoire = rand(0, (count($listeQuestions)-1));
 $questionChoisie = $listeQuestions[$indexAleatoire] ;
 // Afficher la question avec echo (fct qui se trouve dans la classe Question)
 // $questionChoisie->afficherQuestion();
-echo '<h6>' . $questionChoisie->getIntitule_question() . '</h6>';
+echo '<h5 class="titreQuestion">Question : </h5>'; 
+echo '<h6 class="intituleQuestion">' . $questionChoisie->getIntitule_question() . '</h6>';
 // Récupérer l'ID de la question pour trouver les réponses associées
 $indexQuestion = $questionChoisie->getid();
 
 
 // REPONSES ASSOCIÉES
-// echo '<br><br> <h2>Réponses possibles : </h2>';
 $managerReponse = new ReponseManager($bdd);
 // Sélectionner toutes les reponses (array) avec filtre
 $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
@@ -51,8 +50,10 @@ $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
                 <?php
                 $numeroReponse = 1;
                 foreach ($listeReponses as $valeurObjet) {
-                        echo '<br><input type="radio" name="solution" value="' . $numeroReponse . '" class="reponse">';
-                        echo '<p>' . $valeurObjet->getIntitule_reponse() . "</p>";
+                        echo '<div class="reponseRadio">';
+                                echo '<input class="btnRadio" type="radio" id="' . $valeurObjet->getid() . '" name="solution" value="' . $valeurObjet->getResultat() . '"checked>';
+                                echo '<label for="' . $valeurObjet->getid() . '" class="intituleReponse">' . $valeurObjet->getIntitule_reponse() . "</label>";
+                        echo '</div>';
                         $numeroReponse+=1;
                 };
                 ?>
