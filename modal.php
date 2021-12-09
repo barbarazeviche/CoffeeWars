@@ -9,21 +9,23 @@
 </head>
 <body>
     
-<div class="modalFormContainer">
-    <div class="modalFormThird">
-        <div class="modalFormSecond">
-            <div class="modalForm" >
-                <h6>1. A partir de quelle version d'IE peut-on utiliser nativement les élements de section HTML5(sans hack ou script complémentaire ?</h6>
-                <div class="divReponses">
-                    <p class="reponse">A. Reponse a</p>
-                    <p class="reponse">A. Reponse a</p>
-                    <p class="reponse">A. Reponse a</p>
-                </div>
+<div class="glass">
+    <div class="modalFormContainer">
+        <div class="modalFormThird">
+            <div class="modalFormSecond">
+                <div class="modalForm" >
+                    <h6>A partir de quelle version d'IE peut-on utiliser nativement les élements de section HTML5(sans hack ou script complémentaire )</h6>
+                    <div class="divReponses">
+                        <p class="reponse">1. Reponse a</p>
+                        <p class="reponse">2. Reponse a</p>
+                        <p class="reponse">3. Reponse a</p>
+                    </div>
 
-                <div class=btnModalWrapper>
-                    <button class="btnModal">Valider</button>
+                    <div class=btnModalWrapper>
+                        <button class="btnModal">Valider</button>
+                    </div>
+                    
                 </div>
-                
             </div>
         </div>
     </div>
@@ -35,24 +37,7 @@
 
 
 
-<div class="container">
-      <div class="card">
-        <div class="img-box">
-        
-          <h3>
-            1. Question 1
-          </h3>
-        </div>
 
-        <div class="content">
-          <p>
-           
-          </p>
-        </div>
-      </div>
-
-    
-    </div>
 
 
 
