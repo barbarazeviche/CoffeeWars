@@ -10,22 +10,49 @@
 <body>
     
 <div class="modalFormContainer">
-    <div class="modalForm" >
-        <p>1.Question</p>
-        <div class="divReponses">
-            <p class="reponse">A. Reponse a</p>
-            <p class="reponse">A. Reponse a</p>
-            <p class="reponse">A. Reponse a</p>
-        </div>
+    <div class="modalFormThird">
+        <div class="modalFormSecond">
+            <div class="modalForm" >
+                <p>1.Question</p>
+                <div class="divReponses">
+                    <p class="reponse">A. Reponse a</p>
+                    <p class="reponse">A. Reponse a</p>
+                    <p class="reponse">A. Reponse a</p>
+                </div>
 
-        <div class=btnModalWrapper>
-            <button class="btnModal">Valider</button>
+                <div class=btnModalWrapper>
+                    <button class="btnModal">Valider</button>
+                </div>
+                
+            </div>
         </div>
     </div>
 </div>
 
 
 
+
+
+
+
+<div class="container">
+      <div class="card">
+        <div class="img-box">
+        
+          <h3>
+            1. Question 1
+          </h3>
+        </div>
+
+        <div class="content">
+          <p>
+           
+          </p>
+        </div>
+      </div>
+
+    
+    </div>
 
 
 

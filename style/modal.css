@@ -10,6 +10,8 @@
     font-family: bratsy ;
     src: url(../assets/font/bratsy_script/bratsy.otf);
   }
+
+
 .modalFormContainer {
     display:flex;
   justify-content: center;
@@ -17,19 +19,56 @@
   background-color:#FDF5BD;
   flex-direction: column;
   height:830px;
+ 
 }
 
 .modalForm {
-    border:5px solid #ff903b ;
+    
+    border:5px solid #c2631b ;
     width:400px;
     height:600px;
     border-radius:8%;
-    background-color:#8BC87A;
+    background-color:#f47c20;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    z-index:100;
+    transform: translate(-20px,10px);
     
+    
+}
+
+.modalFormSecond {
+    
+    border:5px solid #c29430 ;
+    width:400px;
+    height:600px;
+    border-radius:8%;
+    background-color:#F3BB41;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:70;
+    transform: translate(-20px,20px);
+   
+}
+
+
+.modalFormThird {
+
+    border:5px solid #0e0605 ;
+    width:400px;
+    height:600px;
+    border-radius:8%;
+    background-color:#381915 ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:50;
+    transform: translate(-40px,30px);
     
 }
 
@@ -46,7 +85,7 @@
 p,.btnModal {
     font-family: bratsy;
     font-size:30px;
-    color:#faed8d;;
+    color:#381915;
     cursor:pointer;
     
 }
@@ -54,8 +93,8 @@ p,.btnModal {
     width:200px;
     height:50px;
     border:5px solid #944304 ;
-    background-color:#c48a0d;
-    color:#faed8d;
+    background-color:#F3BB41;
+    color:#381915;
     cursor:pointer;
 }
 
@@ -74,3 +113,6 @@ p,.btnModal {
     padding-top:15px;
     
 }
+
+
+
