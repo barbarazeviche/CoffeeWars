@@ -40,7 +40,7 @@ $indexQuestion = $questionChoisie->getid();
 
 
 // REPONSES ASSOCIÉES
-echo '<br><br> <h2>Réponses possibles : </h2>';
+// echo '<br><br> <h2>Réponses possibles : </h2>';
 $managerReponse = new ReponseManager($bdd);
 // Sélectionner toutes les reponses (array) avec filtre
 $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
@@ -52,7 +52,7 @@ $listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
                 $numeroReponse = 1;
                 foreach ($listeReponses as $valeurObjet) {
                         echo '<br><input type="radio" name="solution" value="' . $numeroReponse . '" class="reponse">';
-                        $valeurObjet->afficherReponse();
+                        echo '<p>' . $valeurObjet->getIntitule_reponse() . "</p>";
                         $numeroReponse+=1;
                 };
                 ?>
