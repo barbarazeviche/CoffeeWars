@@ -156,10 +156,11 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
     border: 6px solid black;
 }
 
-.glass {
+/* .glass {
   position: relative;
-  background: inherit;
-  overflow: hidden;
+  /*inherit de sont body*/
+  /* background: inherit; */
+  /* overflow: hidden;
   width: 100%;
   height: 70%;
   border-radius: 16px;
@@ -170,13 +171,13 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
 .glass:before {
   content: "";
   position: absolute;
-  background: inherit;
-  top: 0;
+  /* background: inherit; */
+  /* top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: -20px;
   box-shadow: inset 0 0 500px rgba(255, 255, 255, 0.4);
   filter: blur(10px);
-  z-index: -1;
-}
+  z-index: -1; 
+} */ 
