@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/wheel.css">
 </head>
 <body>
 
 <header>
     <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
-    <img id="grain_cafe"src="assets/img/grain_cafe.png" alt="">
+    <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p> 
+ <a href="#info">   <img id="grain_cafe"src="assets/img/grain_cafe.png" alt=""> </a>
+  
 </header>
 
-<div>
-    Bienvenue à Interface 3 !
-</div>
+<aside class="bienvenue">
+   <p class="Texte1"> Bienvenue à Interface 3 ! </p>
+   <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
+
+</aside>
+
 <section>
+
     <div id="container">
             
-            <div id="board">       
+
+            <div id="board">   
+              
                 <div class="wrapper">
                     <div id="bloc1">
                         <div class="inutile"></div>
@@ -47,11 +56,21 @@
                     </div>
                 </div>
             </div>
+            <div class="thermos">
+                <img src="assets/img/thermos.png" alt="">
+            </div>
         </div>
 </section>
 
-<footer>
+<footer id="info">
 
 </footer>
+
+
+
+
+
+
+<script src="main.js"></script>
 </body>
 </html>
