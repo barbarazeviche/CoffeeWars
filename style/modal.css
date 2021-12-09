@@ -180,7 +180,3 @@ src: url(../assets/font/bratsy_script/Arista-Pro-Alternate-Light-trial.ttf);
   filter: blur(10px);
   z-index: -1;
 }
-
-.glass {
-  background-color: rgb(231, 20, 20);
-}
