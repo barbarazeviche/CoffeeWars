@@ -5,6 +5,10 @@
     margin:0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: bratsy ;
+  src: url(../assets/font/bratsy_script/bratsy.otf);
+}
 #container {
 
     display:flex;
