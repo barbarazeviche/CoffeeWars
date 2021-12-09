@@ -13,12 +13,14 @@
 
 
 .modalFormContainer {
-    display:flex;
+
+  display:flex;
   justify-content: center;
   align-items:center;
   background-color:#FDF5BD;
   flex-direction: column;
   height:830px;
+  
  
 }
 
@@ -73,7 +75,8 @@
 }
 
 .reponse,.btnModal {
-    border:1px solid #f78731 ;
+
+    /* border:1px solid #f78731 ; */
     border-radius: 10px;
     width:250px;
     height:50px;
@@ -83,6 +86,7 @@
     padding:20px;
 }
 p,.btnModal {
+    
     font-family: bratsy;
     font-size:30px;
     color:#381915;
