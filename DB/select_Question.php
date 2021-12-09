@@ -2,10 +2,10 @@
         // LIAISON BD
         include_once "./config/db.php";
         try {
-            $bdd = new PDO(DBDRIVER . ':host=' . DBHOST . ';port=' . DBPORT . ';dbname=' . DBNAME . ';charset='. DBCHARSET, DBUSER, DBPASS);
+                $bdd = new PDO(DBDRIVER . ':host=' . DBHOST . ';port=' . DBPORT . ';dbname=' . DBNAME . ';charset='. DBCHARSET, DBUSER, DBPASS);
         } catch (Exception $e) {
-            echo $e->getMessage();
-            die();
+                echo $e->getMessage();
+                die();
         }   
         include "./vendor/autoload.php";
 
@@ -19,16 +19,11 @@ $listeTypes = $managerType->select();
 $indexAleatoire = rand(0,count($listeTypes)-1);
 $typeChoisi = $listeTypes[$indexAleatoire] ;
 // var_dump($typeChoisi);
-// echo '<br><br> type choisi : ' . $typeChoisi->getType_question();
-// echo '<br><br> type index : ' . $typeChoisi->id;
-// echo '<br><br>fin type choi';
-
 
 // Afficher le type avec echo (fct qui se trouve dans la classe Type)
 $typeChoisi->afficherType();
-// ! prob pour récupérer ID type
-// $typeChoisi->afficherIndexType();
-// $indexType = $typeChoisi->getid();
+$indexType = $typeChoisi->getid();
+// echo '<br>index Type : ' . $indexType;
 
 
 // CHOIX QUESTION   
@@ -36,34 +31,42 @@ echo '<br><br>
         <h2>Intitulé Question : </h2>'; 
 $managerQuestion = new QuestionManager($bdd);
 // Sélectionner toutes les questions (array)
-// ! modifier indexType avec index de la roue
-$listeQuestions = $managerQuestion->select(['ID_type'=>$indexAleatoire]);
-var_dump($listeQuestions);
-echo '<br>nombre liste : ' . count($listeQuestions) . '<br>';
-// Choisir une question aléatoire
+$listeQuestions = $managerQuestion->select(['ID_type'=>$indexType]);
+
+// var_dump($listeQuestions);
+// echo '<br>nombre liste : ' . count($listeQuestions) . '<br>';
+
+// Choisir une question aléatoire parmi la sélection par type
 $indexAleatoire = rand(0, (count($listeQuestions)-1));
 $questionChoisie = $listeQuestions[$indexAleatoire] ;
-echo '<br>question choisie info : ';
-var_dump($questionChoisie);
 // Afficher la question avec echo (fct qui se trouve dans la classe Question)
 $questionChoisie->afficherQuestion();
-$questionChoisie->getID_type();
+$indexQuestion = $questionChoisie->getid();
+// echo '<br>index question : ' . $indexQuestion;
+// echo '<br>index Type : ' . $questionChoisie->getID_type();
+
+
 
 // REPONSES ASSOCIÉES
 echo '<br><br>
         <h2>Réponses possibles : </h2>';
 // ? AFFICHER TOUTES LES QUESTIONS
 $managerReponse = new ReponseManager($bdd);
-// ! ajouter ID Question dans le filtre du select
 // Sélectionner toutes les reponses (array)
-$listeReponses = $managerReponse->select();
-// Choisir une reponse aléatoire
-$indexAleatoire = rand(0,count($listeReponses)-1);
-$reponseChoisie = $listeReponses[$indexAleatoire] ;
-// Afficher la reponse avec echo (fct qui se trouve dans la classe Reponse)
-$reponseChoisie->afficherReponse();
-// echo '<br><br>';
-// echo $listeQuestions[4]->getIntitule_question();
-// foreach ($listeQuestions as $valeurObjet) {
-//     $valeurObjet->afficherQuestion();
-// };
+$listeReponses = $managerReponse->select(['ID_question'=>$indexQuestion]);
+// Créer formulaire réponses
+?>
+<form action="">
+        <p id="question"></p>
+        <p>
+        <?php
+        $value = 1;
+        foreach ($listeReponses as $valeurObjet) {
+                echo '<br><input type="radio" name="solution" value="' . $value . '">';
+                $valeurObjet->afficherReponse();
+                $value+=1;
+        };
+        ?>
+        </p>
+        <button type="submit">Envoyer</button>
+</form>
