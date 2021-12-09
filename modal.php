@@ -14,7 +14,11 @@
         <div class="modalFormThird">
             <div class="modalFormSecond">
                 <div class="modalForm" >
-                    <h6>A partir de quelle version d'IE peut-on utiliser nativement les élements de section HTML5(sans hack ou script complémentaire )</h6>
+                    <?php
+                        include_once "./select_Question.php";
+                    ?>
+                    
+                    <!-- <h6>A partir de quelle version d'IE peut-on utiliser nativement les élements de section HTML5(sans hack ou script complémentaire )</h6>
                     <div class="divReponses">
                         <p class="reponse">1. Reponse a</p>
                         <p class="reponse">2. Reponse a</p>
@@ -23,7 +27,7 @@
 
                     <div class=btnModalWrapper>
                         <button class="btnModal">Valider</button>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
