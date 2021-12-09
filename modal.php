@@ -13,7 +13,7 @@
     <div class="modalFormThird">
         <div class="modalFormSecond">
             <div class="modalForm" >
-                <p>1.Question</p>
+                <h6>1. A partir de quelle version d'IE peut-on utiliser nativement les élements de section HTML5(sans hack ou script complémentaire ?</h6>
                 <div class="divReponses">
                     <p class="reponse">A. Reponse a</p>
                     <p class="reponse">A. Reponse a</p>
