@@ -6,46 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/wheel.css">
 </head>
 <body>
 
+<header>
+    <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
+    <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p> 
+    <a href="#info">   <img id="grain_cafe"src="assets/img/grain_cafe.png" alt=""> </a>
+  
+</header>
 
+<aside class="bienvenue">
+   <p class="Texte1"> Bienvenue à Interface 3 ! </p>
+   <p class="Texte2"> Tu veux un café ? Ok, mais il va falloir le mériter! </p>
 
-<div id="container">
+</aside>
 
-        <div class="containerBtn">
-            <button class="btn">Valider</button>
-        </div>
-        
-        <div id="board">       
-            <div class="wrapper">
-                <div id="bloc1">
-                 
-                    <div id="wc"></div>
-                    <div class="local6"></div>
-                    <div id="wc">WC2</div>
-                </div>
+<section>
 
-                <div id="bloc2">
-                    <div class="local1">Cafet'</div>
-                    <div class="local6"></div>
-                    <div class="local2">Wad</div>
-                </div>
+    <div id="container">
+            
 
-                <div id="bloc3">
-                    <div class="local3">Profs</div>
-                    <div class="local6"></div>
-                    <div class="local4">Web</div>
-                </div>
+            <div id="board">   
+              
+                <div class="wrapper">
+                    <div id="bloc1">
+                        <div class="inutile"></div>
+                        <div class="local6"></div>
+                        <div id="wc"></div>
+                    </div>
 
-                <div id="bloc4">
-                    <div class="local5">ASR</div>
-                    <div class="local6">Entrée</div>
-                    <div class="local7">Game</div>
+                    <div id="bloc2">
+                        <div class="local1"></div>
+                        <div class="local6"></div>
+                        <div class="local2"></div>
+                    </div>
+
+                    <div id="bloc3">
+                        <div class="local3"></div>
+                        <div class="local6"></div>
+                        <div class="local4"></div>
+                    </div>
+
+                    <div id="bloc4">
+                        <div class="local5"></div>
+                        <div class="local6"></div>
+                        <div class="local7"></div>
+                    </div>
                 </div>
             </div>
+            <div class="thermos">
+                <img src="assets/img/thermos.png" alt="">
+            </div>
         </div>
-    </div>
+</section>
 
+<footer id="info">
+
+</footer>
+
+
+
+
+
+
+<script src="main.js"></script>
 </body>
 </html>

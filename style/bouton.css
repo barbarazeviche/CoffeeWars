@@ -1,0 +1,21 @@
+.btn {
+    width: 150px;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    border: 3px solid #f47c20;
+    cursor: pointer;
+    background: transparent;
+    background-image: url('../assets/img/bg.png');
+    background-repeat: repeat-x;
+    background-position: 0 -100%;
+    transition: 0.9s ease;
+}
+
+.btn:hover {
+    background-position: center;
+}
+
+.btn:nth-child(1) {
+    filter: hue-rotate(0deg);
+}
