@@ -1,79 +1,115 @@
+/* FONTS */
 
-                                        /* CSS MAIN BOARD */
+@font-face {
+    /* bratsy (les titres) */
+    font-family: 'bratsy';
+    src: url('../assets/font/bratsy_script/Bratsy\ Script\ Demo.ttf');
+}
+
+
+/* Variables */
+
+:root {
+    /* Couleurs */
+    --green: #8BC87A;
+    --eggwhite: #FDF5BD;
+    --yellow: #F3BB41;
+    --orange: #f47c20;
+    --red: #F2493E;
+    --brown: #381915;
+    /* Fonts */
+    --bratsy: "bratsy";
+}
+
+
+/* MEMO: On appelle les variables comme ça: 
+body{
+  color: var(--green);
+ } */
+
+
+/* CSS MAIN BOARD */
+
 * {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-#container {
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    align-content:center;
-    background-color:#381915;
-    height:800px;
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #381915;
+    height: 800px;
 }
 
 #board {
-    background-color: #FDF5BD ;
+    background-color: #FDF5BD;
     font-size: 20px;
-    width:50%;
-    padding:50px;
+    width: 50%;
+    padding: 50px;
     /* transform: perspective(10px) rotateX(1deg) ; */
-    margin:0px;
-    border:0px;
-    height:650px;
-    display:flex;
-    flex-direction:column;
-
-
+    margin: 0px;
+    border: 0px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
 }
 
-#bloc1,#bloc2,#bloc3,#bloc4 {
-   display:flex;
-   justify-content:center;
+#bloc1,
+#bloc2,
+#bloc3,
+#bloc4 {
+    display: flex;
+    justify-content: center;
 }
+
 #bloc1 {
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     /* padding-left:220px; */
 }
 
-.local1,.local2,.local3,.local4,.local5,.local7,#wc {
+.local1,
+.local2,
+.local3,
+.local4,
+.local5,
+.local7,
+#wc {
     border: 1px solid rgb(73, 73, 15);
     height: 150px;
-    width:220px;
+    width: 220px;
 }
 
 .local6 {
     /* border: 1px solid rgb(73, 73, 15); */
     height: 150px;
-    width:150px;
-    text-align:center;
+    width: 150px;
+    text-align: center;
 }
-
 
 .wrapper {
-    display:flex;
-    flex-direction:column;
-    align-content:center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
-                                                /* CSS LIQUID BUTTON  */
 
+/* CSS LIQUID BUTTON  */
 
-  .containerBtn{
+.containerBtn {
     /* width: 600px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
     align-items: center; */
-  } 
-  
+}
 
-  .btn{
+.btn {
     width: 150px;
     padding: 12px;
     border-radius: 20px;
@@ -85,12 +121,12 @@
     background-repeat: repeat-x;
     background-position: 0 -100%;
     transition: 0.9s ease;
-  }
-  
-  .btn:hover{
+}
+
+.btn:hover {
     background-position: center;
-  }
-  
-  .btn:nth-child(1){
+}
+
+.btn:nth-child(1) {
     filter: hue-rotate(0deg);
-  }
+}
