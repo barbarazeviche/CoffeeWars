@@ -2,9 +2,7 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [
-		{name:"coffee ehehe_atlas_1", frames: [[0,0,603,648]]}
-];
+lib.ssMetadata = [];
 
 
 (lib.AnMovieClip = function(){
@@ -28,10 +26,9 @@ lib.ssMetadata = [
 
 
 (lib.CoffeeMachinelastchangesmachine = function() {
-	this.initialize(ss["coffee ehehe_atlas_1"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-// helper functions:
+	this.initialize(img.CoffeeMachinelastchangesmachine);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,603,648);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -107,7 +104,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(530.2,282.8,487.4,464.90000000000003);
+p.nominalBounds = new cjs.Rectangle(530.2,282.9,487.4,464.80000000000007);
 // library properties:
 lib.properties = {
 	id: '855A96F920306440AA12076661BFFBF6',
@@ -117,7 +114,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/coffee ehehe_atlas_1.png", id:"coffee ehehe_atlas_1"}
+		{src:"images/CoffeeMachinelastchangesmachine.png", id:"CoffeeMachinelastchangesmachine"}
 	],
 	preloads: []
 };
