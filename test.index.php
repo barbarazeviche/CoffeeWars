@@ -13,7 +13,7 @@
 <header>
     <img id="banniere" src="assets/img/banniere_blanc.svg" alt="">
     <p class="texteBanner">Vite, réponds aux questions avant que le café ne soit terminé!</p> 
- <a href="#info">   <img id="grain_cafe"src="assets/img/grain_cafe.png" alt=""> </a>
+    <a href="#info">   <img id="grain_cafe"src="assets/img/grain_cafe.png" alt=""> </a>
   
 </header>
 

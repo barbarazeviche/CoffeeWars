@@ -67,7 +67,7 @@ body {
     /* transform: perspective(10px) rotateX(1deg) ; */
     margin: 0px;
     border: 0px;
-    height: 970px;
+    height: 1020px;
     display: flex;
     flex-direction: column;
     
@@ -225,7 +225,11 @@ width:350px;
    padding-right:-20px;
 }
 
+.Texte1 {
+    color: #F2493E;
+    font-size:35px;
+}
 .Texte2 {
     color: #8BC87A;
-
+    font-size:30px;
 }
